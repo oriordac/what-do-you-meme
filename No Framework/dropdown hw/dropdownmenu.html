@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Link to CSS needed for dropdown-->
+    <link rel="stylesheet" href="dropdownmenu.css">
+    <title>DropDown HW</title>
+</head>
+<body>
+    <nav>
+        <!--Remember that .tab must be the parent to .tab-content-->
+        <!--or else the css will not work-->
+        <div class="tab">
+            <h3>File</h3>
+            <div class="tab-content">
+                <!--I was going to use an ul-->
+                <!--but I couldn't remember the css to remove the indented  spacing-->
+                <p><a href="#">Open</a></p>
+                <p><a href="#">Save</a></p>
+                <p><a href="#">Print</a></p>
+                <p><a href="#">Exit</a></p>
+            </div>
+        </div>
+        <div class="tab">
+            <h3>Edit</h3>
+            <div class="tab-content">
+                <p><a href="#">Copy</a></p>
+                <p><a href="#">Cut</a></p>
+                <p><a href="#">Paste</a></p>
+                <hr>
+                <p><a href="#">Format</a></p>
+            </div>
+        </div>
+        <div class="tab">
+            <h3>Help</h3>
+            <div class="tab-content">
+                <p><a href="#">About</a></p>
+            </div>
+        </div>
+    </nav>
+    <!--Body with Content-->
+    <div class="box">
+        <h1>Testing Dropdown Menus</h1>
+        <h2>Conor O'Riordan</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Fuga non facere animi atque dolorum tenetur quasi quas eos
+            soluta voluptatem.</p>
+    </div>
+</body>
+</html>

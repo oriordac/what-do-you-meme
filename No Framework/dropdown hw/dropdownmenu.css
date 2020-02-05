@@ -1,0 +1,38 @@
+/*CSS for Dropdown Menus */
+.tab {
+    display: inline-block;
+    width: 80px;
+    border-right: 1px solid whitesmoke;
+    text-align: center;
+}
+.tab-content {
+    /*hide list and remove whitespace */
+    display: none;
+    /* needed when display:block is used with revealed text
+    or list will try to return to its static coded position*/
+    position: absolute;
+    /* set the block list to the same width as .tabs 
+    to make it look better */
+    width: 80px;
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+.tab:hover .tab-content {
+    /* the key step to reveal dropdown using :hover 
+    this is way .tab-content must be nested in .tab*/
+    display: block;
+}
+/* CSS beyond the assigment but for flair */
+nav {
+    background-color: darkcyan;
+    color: whitesmoke;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+a:hover {
+    color: rgb(179, 160, 54);
+}
