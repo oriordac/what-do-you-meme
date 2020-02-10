@@ -1,0 +1,22 @@
+{
+  "name": "what-do-you-meme",
+  "version": "1.0.0",
+  "description": "![A photo of Conor O'Riordan](profile_image.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oriordac/what-do-you-meme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oriordac/what-do-you-meme/issues"
+  },
+  "homepage": "https://github.com/oriordac/what-do-you-meme#readme"
+}
