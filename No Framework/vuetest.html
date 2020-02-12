@@ -15,12 +15,12 @@
           <div class="column">
               <!--Default photo & Main photo-->
               <div class="box"> 
-                  <img :src="image" :alt="altText" /> <!--Use v-bind to reference vue attributes-->
+                  <img :src="image" :alt="altText"/> <!--Use v-bind to reference vue attributes-->
               </div>
               <!--Generate img options below main image using an assoc array-->
               <div v-for="photo in photos" :key="photo.photoid" style="display: inline-block;"> <!--Use v-for to go through an array-->
-                  <figure v-on:click="updatePhoto(photo.photoImage)" 
-                          v-on:click="updateText(photo.monumentName, photo.location, photo.yearofcomp, photo.architect)" 
+                  <figure v-on:click="updatePhoto(photo.photoImage); 
+                                      updateText(photo.monumentName, photo.location, photo.yearofcomp, photo.architect);" 
                           class="image is-128x128"> <!--use v-on to tigger methods in vue-->
                     <img :src="photo.photoImage" :alt="photo.altText">
                   </figure>
@@ -31,9 +31,9 @@
             <div class="notification">
               <h1 class="title"> {{ monumentName }}</h1>
               <div class="content">
-                <p>{{ location }}</p>
-                <p> {{ yearofcomp }}</p>
-                <p> {{architect }}</p>
+                <p><b>Location</b>: {{ location }}</p>
+                <p><b>Year of Completion</b>: {{ yearofcomp }}</p>
+                <p><b>Lead Archtect</b>: {{architect }}</p>
               </div>
             </div>
           </div>
