@@ -10,13 +10,13 @@
       <div class="card">
         <div class="card-content">
           <ul>
-            <li v-for="player in Players" :key="player.Name">
+            <li v-for="player in Game.Players" :key="player.Name">
               {{ player.Name }} {{ player.Score}}
             </li>
           </ul>
         </div>
         <div class="card-image">
-          <img :src="CurrentPicture">
+          <img :src="Game.CurrentPicture">
         </div>
       </div>
   </div>
@@ -24,19 +24,16 @@
 
 <script>
 // @ is an alias to /src
-import { Players, PictureDeck, CurrentPicture, Init} from "../models/Game";
-Init();
+import * as Game from "../models/Game";
 
 export default {
   name: 'Home',
+  created () {
+    Game.Init();
+  },
   data: () => ({
-    Players, 
-    PictureDeck, 
-    CurrentPicture,
-  }),
-  components: {
-    
-  }
+    Game
+  })
 }
 </script>
 
