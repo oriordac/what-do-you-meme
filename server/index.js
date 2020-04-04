@@ -18,5 +18,10 @@ app
         const homePath = path.join(__dirname , '/../client/dist/index.html');
         res.sendFile(homePath);
     })
+    .use((err, req, res, next) => {
+        console.log(err);
+        const errorCode = err.code || 500;
+        res.status(errorCode).send({message: err.message});
+    })
 
 app.listen(port, () => console.log(`Listening at http://localhost:${port}`));
