@@ -10,7 +10,7 @@ router
         Players: game.Players,
         PictureDeck: game.PictureDeck, 
         CurrentPicture: game.CurrentPicture, 
-        CardsInPlay: game.CardsInPlay.map(x => ({...x, PlayerId: undefined}))
+        CardsInPlay: game.CardsInPlay.map(x => ( {...x, PlayerId: 'unknown'} ))
     }) )
     .post('/join', (req, res) => res.send(game.Join(req.body.userid)) )
     .get('/quoteCards', (req, res) => res.send(quoteCards))
@@ -21,7 +21,7 @@ router
     .post('/cardsInPlay', (req, res) => {
         const playerId = req.body.playerId;
         game.SubmitCaption(req.body.caption, playerId);
-        res.send({sucess: true});
+        res.send( {sucess: true} );
     })
     
 

@@ -1,6 +1,6 @@
 const Users = [
-    { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu', userid: 0},
-    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', userid: 1}
+    { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu', userId: 0},
+    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', userId: 1}
 ];
 
 module.exports = {
@@ -12,5 +12,7 @@ module.exports = {
         
         return user;
     },
-    Get: userid => Users[userid]
+    Get(userId) {
+        return Users[userId]
+    }
 }
