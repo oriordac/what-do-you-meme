@@ -1,6 +1,6 @@
 const Users = [
-    { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu', userid: 0},
-    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', userid: 1}
+    { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu', userId: 0},
+    { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', userId: 1}
 ];
 
 module.exports = {
@@ -11,5 +11,8 @@ module.exports = {
         if(user.Password != password) throw Error('Wrong Password');
         
         return user;
+    },
+    Get(userId) {
+        return Users[userId]
     }
 }
