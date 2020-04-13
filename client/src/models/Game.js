@@ -1,10 +1,12 @@
-import { CurrentUser } from "./Users";
-import myFetch from './myFetch';
+import myFetch from "./myFetch";
 
 export let State = {};
-export let MyCards = [];
+export const MyCards = [];
 
-export async function Init(){
-    //MyCards = await myFetch('http://localhost:3000/game/join');
-    State = await myFetch('http://localhost:3000/game');
-} 
+export function Init(){
+    myFetch('http://localhost:3000/game')
+        .then(x=> { 
+            State = x;
+            console.log(x);
+        });
+}
