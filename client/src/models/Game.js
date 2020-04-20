@@ -4,7 +4,7 @@ export let State = {};
 export const MyCards = [];
 
 export function Init(){
-    myFetch('http://localhost:3000/game')
+    myFetch('/game')
         .then(x=> { 
             State = x;
             console.log(x);
