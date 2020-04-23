@@ -24,12 +24,15 @@
 
 <script>
 // @ is an alias to /src
-import * as Game from "../models/Game";
+import Game from "../models/Game";
 
 export default {
-  name: 'Home',
+  name: 'Game',
   created () {
-    Game.Init();
+    Game.Start();
+  },
+  destroyed() {
+    Game.Pause();
   },
   data: () => ({
     Game

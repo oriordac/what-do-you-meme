@@ -1,4 +1,4 @@
-import myFetch, { User } from "./myFetch";
+import myFetch from "./myFetch";
 
 const Users = [
     { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu'},
